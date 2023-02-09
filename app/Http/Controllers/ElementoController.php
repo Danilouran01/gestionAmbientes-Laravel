@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Elemento;
 use Illuminate\Http\Request;
 
+
 class ElementoController extends Controller
 {
     /**
@@ -14,7 +15,10 @@ class ElementoController extends Controller
      */
     public function index()
     {
-        //
+        $elementos=Elemento::all();
+
+        // $elementos= Elemento::join("asistencia", "asistencia.id_alumno", "=", "alumnos.id"->select("*")->get();
+        return view('Elemento.index')->with('elementos',$elementos);
     }
 
     /**

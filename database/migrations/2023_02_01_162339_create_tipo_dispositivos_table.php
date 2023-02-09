@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tipo_dispositivos', function (Blueprint $table) {
             $table->id('id_tipo_dispositivo');
-            $table->string('tipo_dispositivo');
+            $table->string('nombre_tipo_dispositivo');
             $table->timestamps();
         });
     }
